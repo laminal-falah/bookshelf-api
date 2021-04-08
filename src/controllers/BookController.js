@@ -15,7 +15,7 @@ const getAllBooks = (request, h) => {
   let booksResponse = books;
 
   if (name != null) {
-    booksResponse = booksResponse.filter(v => v.name.includes(name));
+    booksResponse = booksResponse.filter(v => v.name.toLowerCase().includes(name.toLowerCase()));
   }
 
   if (reading != null) {
